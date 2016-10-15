@@ -13,8 +13,17 @@ const onSignUp = (event) => {
   .fail(ui.failure);
 };
 
+const onSignIn = (event) => {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.signIn(data)
+  .done(ui.success)
+  .fail(ui.failure);
+};
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
+  $('.sign-in-form').on('submit', onSignIn);
 };
 
 module.exports = {
