@@ -17,4 +17,5 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
+  onGetList
 };
