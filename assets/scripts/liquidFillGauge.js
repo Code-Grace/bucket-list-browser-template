@@ -19,7 +19,6 @@ window.onload = function() {
     // TODO: the number 50 below respresents fill amount
     let gauge2= loadLiquidFillGauge("fillgauge2", 50, config1);
     let config2 = liquidFillGaugeDefaultSettings();
-        console.log(config1);
    
     function NewValue(){
         if(Math.random() > .5){
