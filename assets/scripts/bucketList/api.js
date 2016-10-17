@@ -12,6 +12,17 @@ const getList = function () {
   });
 };
 
+const createItem = function () {
+  return $.ajax({
+  url: app.host + '/post',
+  method: 'POST',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 module.exports = {
 	getList,
+	createItem,
 };

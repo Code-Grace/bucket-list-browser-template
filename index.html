@@ -15,22 +15,13 @@
 
     <body class="container-fluid">
 
-<!--     <nav class="sidebar">
-      <ul>
-        <li><i class="ion-android-home"></i></li>
-        <li><i class="ion-person"></i></li>
-        <li><i class="ion-stats-bars"></i></li>
-        <li><i class="ion-ios-box"></i></li>
-      </ul>
-    </nav> -->
-
-      <div class="menu-btn" id="menu-toggle">
+      <nav class="menu-btn" id="menu-toggle">
         <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
         <div class="auth-menu-btn menu-item"><i class="ion-person"></i></div>
         <div class="stats-menu-btn menu-item"><i class="ion-stats-bars"></i></div>
         <div class="bucketlist-menu-btn menu-item"><i class="ion-ios-box"></i></div>
         <div class="mask2" id="mask2"><i class="fa fa-home fa-3x"></i></div>
-      </div>
+      </nav>
 
       <div class="user-forms">
         
@@ -57,6 +48,13 @@
       <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
+
+      <div class="new-item-div">
+        <form class="new-item-form">
+          <input name="credentials[title]" type="text" class="form-control" placeholder="Title">
+          <input id="create-item" type="Submit" value="Add to your list">
+        </form>
+      </div>
 
     </body>
 </html>
