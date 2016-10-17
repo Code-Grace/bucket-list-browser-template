@@ -5,22 +5,32 @@
       <title>Example</title>
       
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
+      <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
+      <script src="assets/scripts/nav.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
     <body class="container-fluid">
 
-    <nav class="sidebar">
+<!--     <nav class="sidebar">
       <ul>
         <li><i class="ion-android-home"></i></li>
         <li><i class="ion-person"></i></li>
         <li><i class="ion-stats-bars"></i></li>
         <li><i class="ion-ios-box"></i></li>
       </ul>
-    </nav>
+    </nav> -->
+
+      <div class="menu-btn" id="menu-toggle">
+        <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
+        <div class="auth-menu-btn menu-item"><i class="ion-person"></i></div>
+        <div class="stats-menu-btn menu-item"><i class="ion-stats-bars"></i></div>
+        <div class="bucketlist-menu-btn menu-item"><i class="ion-ios-box"></i></div>
+        <div class="mask2" id="mask2"><i class="fa fa-home fa-3x"></i></div>
+      </div>
 
       <div class="user-forms">
         
