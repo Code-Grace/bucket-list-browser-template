@@ -9,11 +9,16 @@
       <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-<!--       <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
-      <script src="assets/scripts/nav.js" type="text/javascript" charset="utf-8" defer></script> -->
+      <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
     </head>
 
     <body class="container-fluid">
+    
+    <div id="msg" style="font-size:largest;">
+      Loading, please wait...
+    </div>
+
+    <div id="body" style="">
 
       <div class="menu-btn" id="menu-toggle">
         <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
@@ -52,6 +57,7 @@
       <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
+    </div>
 
     </body>
 </html>
