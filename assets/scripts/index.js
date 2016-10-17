@@ -7,4 +7,5 @@ const bucketList = require('./bucketList/events.js');
 $(() => {
   authEvents.addHandlers();
   bucketList.addHandlers();
+  
 });

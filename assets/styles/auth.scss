@@ -1,3 +1,13 @@
 .user-forms {
 	margin-top: 200px;
 }
+
+.active-form {
+	background-color: black;
+	margin: 0 auto;
+	width: 30%;
+}
+
+.inactive-form {
+	display: none;
+}

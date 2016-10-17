@@ -9,8 +9,8 @@
       <script src="http://d3js.org/d3.v3.min.js" language="JavaScript"></script>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
-      <script src="assets/scripts/nav.js" type="text/javascript" charset="utf-8" defer></script>
+<!--       <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
+      <script src="assets/scripts/nav.js" type="text/javascript" charset="utf-8" defer></script> -->
     </head>
 
     <body class="container-fluid">
@@ -25,19 +25,23 @@
 
       <div class="user-forms">
         
-        <form class="sign-up-form">
-          <input name="credentials[username]" type="text" class="form-control" placeholder="Username">
-          <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
-          <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
-          <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
-          <input id="sign-up" type="Submit" value="Sign up">
-        </form>
+        <div class="active-form form">
+          <form class="sign-up-form">
+            <input name="credentials[username]" type="text" class="form-control" placeholder="Username">
+            <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
+            <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
+            <input id="sign-up" type="Submit" value="Sign up">
+          </form>
+        </div>
 
-        <form class="sign-in-form">
-          <input id="username" name="credentials[username]" type="text" class="form-control" placeholder="Username">
-          <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
-          <input id="sign-in" type="Submit" value="Sign in">
-        </form>
+        <div class="inactive-form form">
+          <form class="sign-in-form">
+            <input id="username" name="credentials[userName]" type="text" class="form-control" placeholder="Username">
+            <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input id="sign-in" type="Submit" value="Sign in">
+          </form>
+        </div>
 
         <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
 
