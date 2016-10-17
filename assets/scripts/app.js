@@ -1,7 +1,9 @@
 'use strict';
 
+// https://deathbucket.herokuapp.com
+
 const app = {
-  host: "https://deathbucket.herokuapp.com",
+  host: "http://localhost:3000",
 };
 
 module.exports = app;
