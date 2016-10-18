@@ -1,0 +1,35 @@
+.task-tabs {
+	list-style-type: none;
+	margin: 0;
+
+	li {
+		display: inline-block;
+		padding: 10px;
+		background-color: #797777;
+		-moz-user-select: -moz-none;
+   	-khtml-user-select: none;
+   	-webkit-user-select: none;
+  		-ms-user-select: none;
+   	user-select: none;
+   	cursor: pointer;
+   	border-top-left-radius: 5px;
+		border-top-right-radius: 5px;	
+	}
+}
+
+div.create-task-form-div {
+	width: 400px;
+	margin: 0 auto;
+	background-color: rgba(1,1,1,1);
+	padding: 15px;
+	border-radius: 15px;
+
+	input {
+		margin: 10px 0;
+	}
+
+	input.btn {
+		width: 100%;
+	}
+}
+

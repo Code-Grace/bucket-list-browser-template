@@ -4,18 +4,47 @@ const app = require('../app.js');
 
 const getList = function () {
   return $.ajax({
-  url: app.host + '/get',
+  url: app.host + '/tasks',
   method: 'GET',
-  // headers: {
-  //   Authorization: 'Token token=' + app.user.token,
-  //   },
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
   });
 };
 
-const createItem = function () {
+const createTask = function (data) {
   return $.ajax({
-  url: app.host + '/post',
+  url: app.host + '/tasks',
   method: 'POST',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
+  data: data,
+  });
+};
+
+const updateTask = function (id) {
+  
+  let data = {
+    'tasks': {
+      'completed': true,
+    },
+  };
+
+  return $.ajax({
+  url: app.host + '/tasks/' + id,
+  method: 'PATCH',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
+  data: data,
+  });
+};
+
+const deleteTask = function (id) {
+  return $.ajax({
+  url: app.host + '/tasks/' + id,
+  method: 'DELETE',
   headers: {
     Authorization: 'Token token=' + app.user.token,
     },
@@ -24,5 +53,7 @@ const createItem = function () {
 
 module.exports = {
 	getList,
-	createItem,
+	createTask,
+  updateTask,
+  deleteTask,
 };

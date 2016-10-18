@@ -10,10 +10,15 @@
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
-      <script src="assets/scripts/nav.js" type="text/javascript" charset="utf-8" defer></script>
     </head>
 
     <body class="container-fluid">
+    
+    <div id="msg" style="font-size:largest;">
+      Loading, please wait...
+    </div>
+
+    <div id="body" style="">
 
       <div class="menu-btn" id="menu-toggle">
         <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
@@ -25,29 +30,61 @@
 
       <div class="user-forms">
         
-        <form class="sign-up-form">
-          <input name="credentials[username]" type="text" class="form-control" placeholder="Username">
-          <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
-          <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
-          <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
-          <input id="sign-up" type="Submit" value="Sign up">
-        </form>
+        <ul class="auth-tabs">
+          <li class="">Sign in</li>
+          <li class="active">Sign up</li>
+        </ul>
+        <div id="sign-up-form" class="active-form form">
+          <form class="sign-up-form">
+            <input name="credentials[userName]" type="text" class="form-control" placeholder="Username">
+            <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
+            <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
+            <input class="btn btn-primary" id="sign-up" type="Submit" value="Sign up">
+          </form>
+        </div>
 
-        <form class="sign-in-form">
-          <input id="username" name="credentials[username]" type="text" class="form-control" placeholder="Username">
-          <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
-          <input id="sign-in" type="Submit" value="Sign in">
-        </form>
+        <div id="sign-in-form" class="inactive-form form">
+          <form class="sign-in-form">
+            <input id="username" name="credentials[userName]" type="text" class="form-control" placeholder="Username">
+            <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
+            <input class="btn btn-primary" id="sign-in" type="Submit" value="Sign in">
+          </form>
+        </div>
 
         <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
 
       </div>
 
-      <button class="get-list-items">Get list items</button>
+      <div class="tasks">
+
+      <button class="get-tasks">Get tasks</button>
+      <ul class="task-list"></ul>
+
+      <div class="user-forms">
+        
+        <ul class="task-tabs">
+          <li>Create task</li>
+        </ul>
+
+        <div class="create-task-form-div">
+
+          <form class="create-task-form">
+            <input name="tasks[title]" type="text" class="form-control" placeholder="Title">
+            <input name="tasks[description]" type="text" class="form-control" placeholder="description">
+            <input class="btn btn-primary" id="create" type="Submit" value="Create">
+          </form>
+        </div>
+
+        </div>
+
+
+      </div>
 
       <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
+    </div>
 
     </body>
 </html>

@@ -10,24 +10,23 @@ const signUp = function(data) {
   });
 };
 
-const signIn = function(data) {
+const signIn = (data) => {
   return $.ajax({
-    url: app.host + '/post',
-    method: 'POST',
+    url: app.host + '/sign-in',
+    method: "POST",
     data: data,
   });
 };
 
-const signOut = (data) => {
-  // let id = app.user.id;
+const signOut = () => {
+  let id = app.user._id;
 
   return $.ajax({
-    // url: app.host + '/sign-out/' + id,
-    url: app.host + '/delete',
+    url: app.host + '/sign-out/' + id,
     method: 'DELETE',
-    // headers: {
-    //   Authorization: 'Token token=' + app.user.token,
-    // },
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
   });
 };
 

@@ -1,4 +1,5 @@
 .menu-btn {
+	border-radius:50%;
   	top:15px;
   	left:15px;
  	position:fixed;
@@ -6,7 +7,6 @@
   	width:60px;
   	height:60px;
   	background-color:transparent;
-  	border-radius:50%;
   	z-index:20;
   	-webkit-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
 	-moz-box-shadow: 0px 0px 5px 0px rgba(0,0,0,0.75);
@@ -15,7 +15,6 @@
 .home-menu-btn {
 	width:80%;
 	height:80%;
-	background-color:dimGray;
 	border-radius:50%;
 	position:absolute;
 	color:white;
@@ -30,7 +29,6 @@
 .auth-menu-btn {
 	width:80%;
 	height:80%;
-	background-color:dimGray;
 	border-radius:50%;
 	position:absolute;
 	color:white;
@@ -44,7 +42,6 @@
 .stats-menu-btn {
 	width:80%;
 	height:80%;
-	background-color:dimGray;
  	border-radius:50%;
  	position:absolute;
 	color:white;
@@ -54,10 +51,10 @@
  	left:10%;
  	transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1) .4s;  
 }
+
   .bucketlist-menu-btn {
   	width:80%;
   	height:80%;
-  	background-color:dimGray;
   	border-radius:50%;
   	position:absolute;
   	color:white;
@@ -68,15 +65,7 @@
 	transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1) .6s;  
 }
 .mask2 {
-  	top:15px;
-  	left:15px;
-  	width:100px;
- 	height:100px;
-  	background:darkSlateGray;
-  	border-radius:50%;
- 	position:absolute;
-	z-index:21;
-  	color:white;
+
   	text-align:center;
   	line-height:120px;
   	cursor:pointer;
@@ -85,6 +74,8 @@
 
 #mask2 {
 	font-size: 10px;
+	color:white;
+	z-index:21;
 	background-color: #006600;
 	width: 60px;
 	height: 60px;
@@ -92,7 +83,7 @@
 	position: absolute;
 	top: 0px;
 	left: 0;
-	transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1) .6s; 
+	// transition: all 500ms cubic-bezier(0.680, 0, 0.265, 1) .6s; 
 
 	i {
 		vertical-align: middle;
@@ -107,6 +98,7 @@
 	font-size: 25px;
 	background-color: #00cc00;
 	margin-bottom: 10px;
+	border-radius: 50%;
 
 	i {
 		vertical-align: middle;

@@ -18,15 +18,14 @@ const onSignIn = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.signIn(data)
-  .done(ui.success, bucketList.onGetList)
+  .done(ui.signInSuccess)
   .fail(ui.failure);
 };
 
 const onSignOut = function (event) {
   event.preventDefault();
-  let data = getFormFields(event.target);
 
-  api.signOut(data)
+  api.signOut()
     .done(ui.signOutSuccess)
     .fail(ui.failure);
 };
