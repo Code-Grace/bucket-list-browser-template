@@ -19,7 +19,7 @@ const signIn = (data) => {
 };
 
 const signOut = () => {
-  let id = app.user.id;
+  let id = app.user._id;
 
   return $.ajax({
     url: app.host + '/sign-out/' + id,
