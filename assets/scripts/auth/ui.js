@@ -8,7 +8,6 @@ const failure = () => console.log("failure");
 
 const signInSuccess = (data) => {
 	app.user = data.user;
-	//console.log(data);
 };
 
 module.exports = {

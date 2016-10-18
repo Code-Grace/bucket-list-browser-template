@@ -6,15 +6,16 @@ const getList = function () {
   return $.ajax({
   url: app.host + '/get',
   method: 'GET',
-  // headers: {
-  //   Authorization: 'Token token=' + app.user.token,
-  //   },
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
   });
 };
 
-const createItem = function () {
+const createTask = function (data) {
+  console.log(data);
   return $.ajax({
-  url: app.host + '/post',
+  url: app.host + '/tasks',
   method: 'POST',
   headers: {
     Authorization: 'Token token=' + app.user.token,
@@ -24,5 +25,5 @@ const createItem = function () {
 
 module.exports = {
 	getList,
-	createItem,
+	createTask,
 };

@@ -56,7 +56,28 @@
 
       </div>
 
+      <div class="tasks">
+
       <button class="get-list-items">Get list items</button>
+
+      <div class="user-forms">
+        
+        <ul class="task-tabs">
+          <li>Create task</li>
+        </ul>
+
+        <div class="create-task-form-div">
+
+          <form class="create-task-form">
+            <input name="tasks[title]" type="text" class="form-control" placeholder="Title">
+            <input name="tasks[description]" type="text" class="form-control" placeholder="description">
+            <input class="btn btn-primary" id="create" type="Submit" value="Create">
+          </form>
+        </div>
+
+        </div>
+
+      </div>
 
       <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
