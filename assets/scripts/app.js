@@ -3,7 +3,7 @@
 // https://deathbucket.herokuapp.com
 
 const app = {
-  host: "http://localhost:3000",
+  host: "https://deathbucket.herokuapp.com",
 };
 
 module.exports = app;
