@@ -1,13 +1,50 @@
 .user-forms {
 	margin-top: 200px;
+	width: 400px;
+	margin: 120px auto 0 auto;
+
+	input {
+		margin: 10px 0;
+	}
+
+	input.btn {
+		width: 100%;
+	}
 }
 
 .active-form {
 	background-color: black;
-	margin: 0 auto;
-	width: 30%;
+	padding: 15px;
+	border-radius: 15px;
 }
 
 .inactive-form {
 	display: none;
+}
+
+.auth-tabs {
+	list-style-type: none;
+	margin: 0;
+	
+	li {
+		display: inline-block;
+		padding: 10px;
+		background-color: #d3d3d3;
+		-moz-user-select: -moz-none;
+   	-khtml-user-select: none;
+   	-webkit-user-select: none;
+  		-ms-user-select: none;
+   	user-select: none;
+   	cursor: pointer;
+   	border-top-left-radius: 5px;
+		border-top-right-radius: 5px;	
+
+   	&.active {
+   		background-color: #797777;
+   	}
+
+   	&:hover {
+   		background-color: #797777;
+   	}
+	}
 }
