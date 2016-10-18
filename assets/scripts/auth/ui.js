@@ -2,7 +2,7 @@
 
 const app = require('../app.js');
 
-const success = () => console.log("success");
+const success = (data) => console.log(data);
 
 const failure = () => console.log("failure");
 

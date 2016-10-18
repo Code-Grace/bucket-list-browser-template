@@ -4,7 +4,7 @@ const app = require('../app.js');
 
 const getList = function () {
   return $.ajax({
-  url: app.host + '/get',
+  url: app.host + '/tasks',
   method: 'GET',
   headers: {
     Authorization: 'Token token=' + app.user.token,
@@ -13,13 +13,13 @@ const getList = function () {
 };
 
 const createTask = function (data) {
-  console.log(data);
   return $.ajax({
   url: app.host + '/tasks',
   method: 'POST',
   headers: {
     Authorization: 'Token token=' + app.user.token,
     },
+  data: data,
   });
 };
 

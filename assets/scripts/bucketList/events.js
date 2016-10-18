@@ -5,9 +5,9 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api');
 const ui = require('./ui');
 
-const onGetList = () => {
+const onGetTasks = () => {
 	api.getList()
-	.done(ui.success)
+	.done(ui.getTaskSuccess)
 	.fail(ui.failure);
 };
 
@@ -20,11 +20,10 @@ const onCreateTask = (event) => {
 };
 
 const addHandlers = () => {
-  $('.get-list-items').on('click', onGetList);
+  $('.get-tasks').on('click', onGetTasks);
   $('.create-task-form').on('submit', onCreateTask);
 };
 
 module.exports = {
   addHandlers,
-  onGetList
 };
