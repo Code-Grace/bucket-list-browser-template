@@ -18,12 +18,11 @@ const signIn = (data) => {
   });
 };
 
-const signOut = (data) => {
+const signOut = () => {
   let id = app.user.id;
 
   return $.ajax({
     url: app.host + '/sign-out/' + id,
-    url: app.host + '/delete',
     method: 'DELETE',
     headers: {
       Authorization: 'Token token=' + app.user.token,
