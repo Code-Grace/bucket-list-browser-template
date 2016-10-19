@@ -4,12 +4,12 @@
       <meta charset="UTF-8">
       <title>Example</title>
       
+      <link href="https://fonts.googleapis.com/css?family=Heebo:500,900" rel="stylesheet">
       <link rel="stylesheet" href="https://code.ionicframework.com/ionicons/2.0.1/css/ionicons.min.css">
       <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css">
       <script src="https://d3js.org/d3.v3.min.js" language="JavaScript"></script>
       <script src="vendor.bundle.js" type="text/javascript" charset="utf-8" defer></script>
       <script src="bundle.js" type="text/javascript" charset="utf-8" defer></script>
-      <script src="assets/scripts/liquidFillGauge.js" language="JavaScript"></script>
     </head>
 
     <body class="container-fluid">
@@ -19,16 +19,145 @@
     </div>
 
     <div id="body" style="">
+    <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
 
       <div class="menu-btn" id="menu-toggle">
         <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
         <div class="auth-menu-btn menu-item"><i class="ion-person"></i></div>
         <div class="stats-menu-btn menu-item"><i class="ion-stats-bars"></i></div>
         <div class="bucketlist-menu-btn menu-item"><i class="ion-ios-box"></i></div>
-        <div class="mask2 menu-item" id="mask2"><i class="ion-navicon-round"></i></div>
+        <div class="mask2 menu-item menu-toggle" id="mask2"><i class="ion-navicon-round"></i></div>
+
       </div>
 
-      <div class="user-forms">
+      <div class="homepage active-view">
+        <div id="thumbnail-preview-indicators" class="carousel slide" data-ride="carousel">
+      <!-- Indicators -->
+      <ol class="carousel-indicators">
+        <li data-target="#thumbnail-preview-indicators" data-slide-to="0" class="active">
+          <!-- <div class="thumbnail">
+            <img class="img-responsive" src="assets/styles/images/building.jpg">
+          </div> -->
+        </li>
+        <li data-target="#thumbnail-preview-indicators" data-slide-to="1">
+        <!-- <div class="thumbnail">
+            <img class="img-responsive" src="assets/styles/images/clouds.jpg">
+          </div> -->
+        </li>
+        <li data-target="#thumbnail-preview-indicators" data-slide-to="2">
+        <!-- <div class="thumbnail">
+            <img class="img-responsive" src="assets/styles/images/runners.jpg">
+          </div> -->
+        </li>
+        <li data-target="#thumbnail-preview-indicators" data-slide-to="3">
+        <!-- <div class="thumbnail">
+            <img class="img-responsive" src="assets/styles/images/runners.jpg">
+          </div> -->
+        </li>
+      </ol>
+      <div class="carousel-inner">
+        <div class="item slides active">
+          <div class="slide-1"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Take charge of your future</h1>
+              <p> Create meaningful events to be completed before your time is
+                up. After errands, work, caring for someone, we are left with
+                years to be dedicated to do the things you care about.
+                Calculate the time you have left.</p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up today</a></p> -->
+            </div>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-2"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Join us</h1>
+              <p>Create an account to start your bucket list today.</p>
+              <!-- <p><a class="btn btn-lg btn-primary" href="#" role="button">Learn more</a></p> -->
+              <p><a class="btn btn-lg btn-primary" href="#" role="button">Sign up</a></p>
+            </div>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-3"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Our data</h1>
+              <p>We measured the average age at death of the USA population.
+                Also, only 10% of our life is actually considered purely "me-
+                time." That's 8 years or 2,922 days out of 29,220 days of life
+                we got. Let's use them wisely. </p>
+            </div>
+          </div>
+        </div>
+        <div class="item slides">
+          <div class="slide-4"></div>
+          <div class="container">
+            <div class="carousel-caption">
+              <h1>Me-time planning made easy</h1>
+              <!-- <p>Create an account to start your bucket list today.</p> -->
+              <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+              <script language="javascript" type="text/javascript">
+                function timerTick() {
+                  with (new Date()) {
+                    var h, m, s;
+
+                    h = 30 * ((getHours() % 12) + getMinutes() / 60);
+                    m = 6 * getMinutes();
+                    s = 6 * getSeconds();
+
+                    document.getElementById('h_pointer').setAttribute('transform', 'rotate(' + h + ', 50, 50)');
+                    document.getElementById('m_pointer').setAttribute('transform', 'rotate(' + m + ', 50, 50)');
+                    document.getElementById('s_pointer').setAttribute('transform', 'rotate(' + s + ', 50, 50)');
+
+                    setTimeout(timerTick, 1000);
+                  }
+                }
+              </script>
+            </head>
+            <body onload='timerTick()'>
+              <noscript><div id='box'>Please, enable JavaScript and refresh page.</div></noscript>
+              <table id='container'>
+                <tr>
+                  <td>
+                    <svg id='clock' viewBox='0 0 100 100' width='200' height='200'>
+                      <circle id='surface' cx='50' cy='50' r='45'/>
+                      <g id='pointers'>
+                        <line id='h_pointer' x1='50' y1='50' x2='50' y2='27' />
+                        <line id='m_pointer' x1='50' y1='50' x2='50' y2='17' />
+                        <line id='s_pointer' x1='50' y1='50' x2='50' y2='13' />
+                      </g>
+                      <g id='numbers'>
+                        <text x='43' y='18'>12</text>
+                        <text x='85' y='54'>3</text>
+                        <text x='47' y='91'>6</text>
+                        <text x='9' y='54'>9</text>
+                      </g>
+                    </svg>
+                  </td>
+                </tr>
+              </table>
+
+
+            </div>
+          </div>
+        </div>
+
+
+
+
+
+      </div>
+      <!-- <a class="left carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="prev"><span class="glyphicon glyphicon-chevron-left"></span></a>
+      <a class="right carousel-control" href="#thumbnail-preview-indicators" role="button" data-slide="next"><span class="glyphicon glyphicon-chevron-right"></span></a> -->
+    </div>
+
+
+      </div>
+
+      <div class="auth-forms inactive-view">
         
         <ul class="auth-tabs">
           <li class="">Sign in</li>
@@ -40,7 +169,7 @@
             <input name="credentials[yearOfBirth]" type="text" class="form-control" placeholder="Year of birth">
             <input name="credentials[password]" type="password" class="form-control" placeholder="Password">
             <input name="credentials[password_confirmation]" type="password" class="form-control" placeholder="Confirm password">
-            <input class="btn btn-primary" id="sign-up" type="Submit" value="Sign up">
+            <input class="btn btn-primary submit" id="sign-up" type="Submit" value="Sign up">
           </form>
         </div>
 
@@ -48,17 +177,16 @@
           <form class="sign-in-form">
             <input id="username" name="credentials[userName]" type="text" class="form-control" placeholder="Username">
             <input id="signInPassword" name="credentials[password]" type="password" class="form-control" placeholder="Password">
-            <input class="btn btn-primary" id="sign-in" type="Submit" value="Sign in">
+            <input class="btn btn-primary submit" id="sign-in" type="Submit" value="Sign in">
           </form>
         </div>
 
-        <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
-
       </div>
 
-      <div class="tasks">
+      <div class="tasks inactive-view">
 
-      <button class="get-tasks">Get tasks</button>
+      <button class="get-tasks-btn" type="submit" name="submit">Get tasks</button>
+
       <ul class="task-list"></ul>
 
       <div class="user-forms">
@@ -72,19 +200,25 @@
           <form class="create-task-form">
             <input name="tasks[title]" type="text" class="form-control" placeholder="Title">
             <input name="tasks[description]" type="text" class="form-control" placeholder="description">
-            <input class="btn btn-primary" id="create" type="Submit" value="Create">
+            <input class="btn btn-primary submit" id="create" type="Submit" value="Create">
           </form>
         </div>
 
         </div>
 
-
       </div>
 
-      <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
+      <div class="data inactive-view">
 
-      <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
+      <svg id="fillgauge2" width="200" height="200" onclick="gauge2.update(NewValue());"></svg>
+
+<!--       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script> -->
+      </div>
+    
     </div>
+
+    </body>
+</html>   </div>
 
     </body>
 </html>

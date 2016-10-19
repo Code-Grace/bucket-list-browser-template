@@ -1,0 +1,13 @@
+body.container-fluid {
+	height: 100vh;
+}
+
+.active-view {
+	height: 100vh;
+	width: 100%;
+	overflow: hide;
+}
+
+.inactive-view {
+	display: none
+}

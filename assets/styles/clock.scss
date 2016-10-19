@@ -1,0 +1,37 @@
+* {
+  margin: 0;
+  padding: 0;
+}
+td {
+  text-align: center;
+}
+#box {
+  background-color: #cc0000;
+  color: #fff;
+  font-weight: bold;
+  text-align: center;
+  padding: 3px 0 3px 0;
+}
+#container {
+  height: 100%;
+  vertical-align: middle;
+  width: 100%;
+}
+#clock {
+  fill: none;
+  stroke: #000;
+  stroke-linecap: round;
+}
+#surface, #h_pointer {
+  stroke-width: 5px;
+}
+#delimiters, #s_pointer {
+  stroke-width: 1px;
+}
+#m_pointer {
+  stroke-width: 3px;
+}
+#numbers {
+  font-family: garamond;
+  font-size: 80%;
+}

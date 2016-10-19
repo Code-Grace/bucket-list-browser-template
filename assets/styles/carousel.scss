@@ -1,0 +1,98 @@
+p {
+  font-size: 24px;
+  font-family: 'Heebo', sans-serif;
+  text-shadow: 2px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+h1 {
+  font-family: 'Heebo', sans-serif;
+  text-shadow: 1px 0 0 #000, 0 -1px 0 #000, 0 1px 0 #000, -1px 0 0 #000;
+}
+
+#thumbnail-preview-indicators {
+  overflow: hidden;
+  position: relative;
+}
+
+#thumbnail-preview-indicators .slides .slide-1,
+#thumbnail-preview-indicators .slides .slide-2,
+#thumbnail-preview-indicators .slides .slide-3,
+#thumbnail-preview-indicators .slides .slide-4 {
+  background-position: center center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+#thumbnail-preview-indicators,
+#thumbnail-preview-indicators .slides,
+#thumbnail-preview-indicators .slides .slide-1,
+#thumbnail-preview-indicators .slides .slide-2,
+#thumbnail-preview-indicators .slides .slide-3,
+#thumbnail-preview-indicators .slides .slide-4 {
+  height: 480px;
+}
+
+#thumbnail-preview-indicators .slides .slide-1 {
+  background-image: url('images/building.jpg');
+}
+
+#thumbnail-preview-indicators .slides .slide-2 {
+  background-image: url('images/clouds.jpg');
+}
+
+#thumbnail-preview-indicators .slides .slide-3 {
+  background-image: url('images/runners.jpg');
+}
+
+#thumbnail-preview-indicators .slides .slide-4 {
+  background-image: url('images/space.jpg');
+}
+
+#thumbnail-preview-indicators .carousel-inner .item .carousel-caption {
+  bottom: inherit;
+  top: 20%;
+}
+
+#thumbnail-preview-indicators .carousel-indicators li,
+#thumbnail-preview-indicators .carousel-indicators li.active {
+  height: 8px;
+  position: relative;
+  width: 100px;
+}
+
+#thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+  position: absolute;
+  top: 0;
+  width: 100px;
+  display: none;
+  opacity: 0;
+  left: 50%;
+  margin-top: -80px;
+  margin-left: -50px;
+}
+
+#thumbnail-preview-indicators .carousel-indicators li:hover > .thumbnail,
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail {
+  display: block;
+  opacity: .8;
+}
+
+#thumbnail-preview-indicators .carousel-indicators li.active > .thumbnail:hover{
+  opacity: 1;
+}
+
+@media screen and (max-width : 480px) {
+    #thumbnail-preview-indicators .carousel-indicators li,
+    #thumbnail-preview-indicators .carousel-indicators li.active {
+      height: 8px;
+      position: relative;
+      width: 50px;
+    }
+
+    #thumbnail-preview-indicators .carousel-indicators li > .thumbnail {
+       left: 50%;
+       margin-left: -25px;
+       margin-top: -50px;
+       width: 50px;
+    }
+}

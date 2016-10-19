@@ -1,3 +1,9 @@
+.sign-out-btn {
+	position: fixed;
+	right: 10px;
+	top: 10px;
+}
+
 .menu-btn {
 	border-radius:50%;
   	top:15px;
@@ -76,7 +82,7 @@
 	font-size: 10px;
 	color:white;
 	z-index:21;
-	background-color: #006600;
+	background-color: #23627F;
 	width: 60px;
 	height: 60px;
 	display: inline;
@@ -96,7 +102,7 @@
 
 .menu-item {
 	font-size: 25px;
-	background-color: #00cc00;
+	background-color: #47C4FF;
 	margin-bottom: 10px;
 	border-radius: 50%;
 

@@ -24,7 +24,7 @@ const onDeleteTask = function (event) {
 	let taskId = $(event.target).attr('-data-id');
 	
 	api.deleteTask(taskId)
-	  .done(ui.success)
+	  .done(onGetTasks)
 	  .fail(ui.failure);
 
 };
@@ -33,12 +33,12 @@ const onUpdateTask = function () {
 	let taskId = $(this).attr('-data-id');
 	
 	api.updateTask(taskId)
-	  .done(ui.success)
+	  .done(onGetTasks)
 	  .fail(ui.failure);
 };
 
 const addHandlers = () => {
-  $('.get-tasks').on('click', onGetTasks);
+  $('.get-tasks-btn').on('click', onGetTasks);
   $('.create-task-form').on('submit', onCreateTask);
   $('body').on('click', '#delete', onDeleteTask);
   $('body').on('click', '#update', onUpdateTask);
@@ -46,4 +46,5 @@ const addHandlers = () => {
 
 module.exports = {
   addHandlers,
+  onGetTasks,
 };

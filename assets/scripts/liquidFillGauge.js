@@ -7,7 +7,24 @@
  */
  'use strict';
 
-window.onload = function() {
+ const app = require('./app.js');
+
+ const userage = function () {
+    return new Date().getFullYear() - app.user.yearOfBirth;
+ };
+
+
+const fillGauge = function() {
+    
+    let calculate = function () {
+        let thisYear = new Date().getFullYear();
+        let age = thisYear - app.user.yearOfBirth;
+        let percentage = 100 - (age / 80 * 100);
+        return percentage;
+    };
+
+
+
     let config1 = liquidFillGaugeDefaultSettings();
     config1.circleColor = "#FF7777";
     config1.textColor = "#FF4444";
@@ -17,7 +34,7 @@ window.onload = function() {
     config1.textVertPosition = 0.2;
     config1.waveAnimateTime = 1000;
     // TODO: the number 50 below respresents fill amount
-    let gauge2= loadLiquidFillGauge("fillgauge2", 50, config1);
+    let gauge2= loadLiquidFillGauge("fillgauge2", calculate(), config1);
     let config2 = liquidFillGaugeDefaultSettings();
    
     function NewValue(){
@@ -290,5 +307,8 @@ function loadLiquidFillGauge(elementId, value, config) {
 
     return new GaugeUpdater();
 
+};
 
+module.exports = {
+    fillGauge,
 }

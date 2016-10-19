@@ -8,7 +8,7 @@ $(document).ready(function() {
   let active4 = false;
   let active5 = false; 
 
-  $('#menu-toggle').on('click', function() {
+  $('.menu-toggle').on('click', function() {
     
     if (!active4) $(this).find('.mask2').css({'transform': 'rotate(-90deg)'});
     else $(this).find('.mask2').css({'transform': 'none'});
@@ -24,22 +24,6 @@ $(document).ready(function() {
     active2 = !active2;
     active3 = !active3;
     active4 = !active4;
-    });
-
-    $('.home-menu-btn').on('click', function() {
-      //add code here
-    });
-
-    $('.auth-menu-btn').on('click', function() {
-      //add code here
-    });
-
-    $('.stats-menu-btn').on('click', function() {
-      //add code here
-    });
-
-    $('.bucketlist-menu-btn').on('click', function() {
-      //add code here
     });
 });
 
