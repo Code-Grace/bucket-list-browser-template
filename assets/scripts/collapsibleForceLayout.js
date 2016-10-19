@@ -1,6 +1,6 @@
 'use strict';
 
-let width = 960,
+let width = 400,
     height = 500,
     root;
 

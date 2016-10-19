@@ -1,3 +1,10 @@
 .liquidFillGaugeText { 
 	font-family: Helvetica; font-weight: bold; 
 }
+
+.data > #fillgauge2 {
+	position: absolute;
+	top: 200px;
+	right: 200px;
+	margin: 0;
+}
