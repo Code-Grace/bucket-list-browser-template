@@ -8,7 +8,7 @@ let force = d3.layout.force()
     .size([width, height])
     .on("tick", tick);
 
-let svg = d3.select("body").append("svg")
+let svg = d3.select("div.data").append("svg")
     .attr("width", width)
     .attr("height", height);
 

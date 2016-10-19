@@ -19,16 +19,18 @@
     </div>
 
     <div id="body" style="">
+    <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
 
       <div class="menu-btn" id="menu-toggle">
         <div class="home-menu-btn menu-item"><i class="ion-android-home"></i></div>
         <div class="auth-menu-btn menu-item"><i class="ion-person"></i></div>
         <div class="stats-menu-btn menu-item"><i class="ion-stats-bars"></i></div>
         <div class="bucketlist-menu-btn menu-item"><i class="ion-ios-box"></i></div>
-        <div class="mask2 menu-item" id="mask2"><i class="ion-navicon-round"></i></div>
+        <div class="mask2 menu-item menu-toggle" id="mask2"><i class="ion-navicon-round"></i></div>
+
       </div>
 
-      <div class="user-forms">
+      <div class="auth-forms active-view">
         
         <ul class="auth-tabs">
           <li class="">Sign in</li>
@@ -52,13 +54,12 @@
           </form>
         </div>
 
-        <button class="sign-out-btn" id="sign-out" type="submit" name="submit">Sign Out</button>
-
       </div>
 
-      <div class="tasks">
+      <div class="tasks inactive-view">
 
-      <button class="get-tasks">Get tasks</button>
+      <button class="get-tasks-btn" id="sign-out" type="submit" name="submit">Get tasks</button>
+
       <ul class="task-list"></ul>
 
       <div class="user-forms">
@@ -78,12 +79,15 @@
 
         </div>
 
-
       </div>
+
+      <div class="data inactive-view">
 
       <svg id="fillgauge2" width="19%" height="200" onclick="gauge2.update(NewValue());"></svg>
 
       <script src="assets/scripts/collapsibleForceLayout.js" language="JavaScript"></script>
+      </div>
+    
     </div>
 
     </body>
