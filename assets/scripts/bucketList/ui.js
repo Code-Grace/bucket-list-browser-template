@@ -8,9 +8,14 @@ const getTaskSuccess = (data) => {
 	
 	let tasks = data.tasks;
 
+	$('.task-list').html('');
+
 	tasks.forEach((task) => {
-		console.log(task.title + ' ' + task.description);
-		$('.task-list').append( '<li>' + task.title + ' ' + task.description + ' ' + task.completed + '<button id="delete" -data-id=' + task._id + '> delete</button> <button id="update" -data-id=' + task._id + '>update</button>' + '</li>' );
+		if (task.completed) {
+		$('.task-list').append( '<li>' + task.title + ' | ' + task.description + ' | ' + 'completed' + '<button id="delete" -data-id=' + task._id + '> delete</button>' + '</li>' );
+		} else {
+			$('.task-list').append( '<li>' + task.title + ' | ' + task.description + ' ' + '<button id="delete" -data-id=' + task._id + '> delete</button> <button id="update" -data-id=' + task._id + '>update</button>' + '</li>' );
+		}
 	});
 };
 
