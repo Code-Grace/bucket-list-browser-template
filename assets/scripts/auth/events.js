@@ -5,6 +5,7 @@ const getFormFields = require('../../../lib/get-form-fields');
 const api = require('./api');
 const ui = require('./ui');
 const bucketList = require('../bucketList/events.js');
+const fillGauge = require('../liquidFillGauge.js');
 
 const onSignUp = (event) => {
   event.preventDefault();
@@ -18,7 +19,7 @@ const onSignIn = (event) => {
   event.preventDefault();
   let data = getFormFields(event.target);
   api.signIn(data)
-  .done(ui.signInSuccess)
+  .done(ui.signInSuccess, fillGauge.fillGauge)
   .fail(ui.failure);
 };
 

@@ -1,6 +1,6 @@
 'use strict';
 
-const bucketlist = require('../bucketlist/events.js');
+const bucketlist = require('../bucketList/events.js');
 
 const viewchange = function () {
   $('.home-menu-btn').on('click', function() {
