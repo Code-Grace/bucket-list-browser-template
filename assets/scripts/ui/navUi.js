@@ -24,24 +24,8 @@ const navFunction = () => {
     	active3 = !active3;
     	active4 = !active4;
     });
-
-   $('.home-menu-btn').on('click', function() {
-      //add code here
-   });
-
-   $('.auth-menu-btn').on('click', function() {
-      //add code here
-   });
-
-   $('.stats-menu-btn').on('click', function() {
-      //add code here
-   });
-
-   $('.bucketlist-menu-btn').on('click', function() {
-      //add code here
-   });
-};
+  };
 
 module.exports = {
 	navFunction,
-}
+};
