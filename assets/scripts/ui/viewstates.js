@@ -1,5 +1,7 @@
 'use strict';
 
+const bucketlist = require('../bucketlist/events.js');
+
 const viewchange = function () {
   $('.home-menu-btn').on('click', function() {
     
@@ -20,6 +22,7 @@ const viewchange = function () {
   });
 
   $('.bucketlist-menu-btn').on('click', function() {
+    bucketlist.onGetTasks();
     $('.active-view').addClass('inactive-view');
     $('.active-view').removeClass('active-view');
     $('.tasks').removeClass('inactive-view');
