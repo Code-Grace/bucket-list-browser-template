@@ -13,32 +13,39 @@
 .task-tabs {
 	list-style-type: none;
 	margin: 0;
-	position: relative;
-
+	
 	li {
 		display: inline-block;
 		padding: 10px;
-		background-color: #797777;
+		background-color: #23627F;
 		-moz-user-select: -moz-none;
    	-khtml-user-select: none;
    	-webkit-user-select: none;
   		-ms-user-select: none;
    	user-select: none;
    	cursor: pointer;
-   	border-top-left-radius: 5px;
-		border-top-right-radius: 5px;	
+   	border-top-left-radius: 2px;
+		border-top-right-radius: 2px;	
+		color: white;
 	}
 }
 
 div.create-task-form-div {
-	width: 400px;
-	margin: 0 auto;
-	background-color: rgba(1,1,1,1);
+	background-color: black;
 	padding: 15px;
-	border-radius: 15px;
+	border-radius: 5px;
+	border: 2px solid #23627F;
 
 	input {
 		margin: 10px 0;
+		border: 2px solid #23627F;
+		border-radius: 1px;
+		background-color: #2b2b2b;
+		color: white;
+
+		&.submit {
+			background-color: #23627F;
+		}
 	}
 
 	input.btn {

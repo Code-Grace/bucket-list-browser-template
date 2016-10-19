@@ -5,6 +5,14 @@
 
 	input {
 		margin: 10px 0;
+		border: 2px solid #23627F;
+		border-radius: 1px;
+		background-color: #2b2b2b;
+		color: white;
+
+		&.submit {
+			background-color: #23627F;
+		}
 	}
 
 	input.btn {
@@ -15,7 +23,8 @@
 .active-form {
 	background-color: black;
 	padding: 15px;
-	border-radius: 15px;
+	border-radius: 5px;
+	border: 2px solid #23627F;
 }
 
 .inactive-form {
@@ -36,15 +45,12 @@
   		-ms-user-select: none;
    	user-select: none;
    	cursor: pointer;
-   	border-top-left-radius: 5px;
-		border-top-right-radius: 5px;	
+   	border-top-left-radius: 2px;
+		border-top-right-radius: 2px;	
 
    	&.active {
-   		background-color: #797777;
-   	}
-
-   	&:hover {
-   		background-color: #797777;
+   		background-color: #23627F;
+   		color: white;
    	}
 	}
 }
