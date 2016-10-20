@@ -1,6 +1,6 @@
 DEATHBUCKET
 
-70,000 (h)ours makes it easy for users to build a bucket list of their choice while having a calculation of their time left on planet earth. While we know the concept of death is not a very friendly one, this will make our users conscious about the value of time. After the time spent at work, groceries, caring for others, etc, we only have so much time left available for us: real life me-time! According to our data, the average American lives 80 years old only 10% of that time is reserved to do as we please.
+DEATHBUCKET makes it easy for users to build a bucket list of their choice while having a calculation of their time left on planet earth. While we know the concept of death is not a very friendly one, this will make our users conscious about the value of time. After the time spent at work, groceries, caring for others, etc, we only have so much time left available for us: real life me-time! According to our data, the average American lives 80 years old only 10% of that time is reserved to do as we please.
 
 Our inspiration came from this video on YouTube. However, we changed the data to reflect the situation in the US.
 
