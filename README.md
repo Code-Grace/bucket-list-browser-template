@@ -26,3 +26,6 @@ Development Process
 As a group, we started brainstorming and later decided on what kind of app this would be, and the data plus reach goals we wanted to display. We used tools such as Jira and Google Hangouts to be in touch during the weekend.
 
 The API took most of our time, but we worked on the front end along the way. For styling we dedicated the last day before presentation, but we wished we had more time to accomplish the design in mind. The main goal for us was to get the app working and running.
+
+Back-end repo: https://github.com/Code-Grace/bucket-list-api
+Deployed api URL: https://deathbucket.herokuapp.com/
