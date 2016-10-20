@@ -13,6 +13,10 @@ const signInSuccess = (data) => {
 
 const signOutSuccess = () => {
 	$('.sign-out-btn').hide();
+  $('.active-view').addClass('inactive-view');
+  $('.active-view').removeClass('active-view');
+  $('.homepage').removeClass('inactive-view');
+  $('.homepage').addClass('active-view');
 };
 
 module.exports = {

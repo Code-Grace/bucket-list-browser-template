@@ -4,7 +4,10 @@ const bucketlist = require('../bucketList/events.js');
 
 const viewchange = function () {
   $('.home-menu-btn').on('click', function() {
-    
+    $('.active-view').addClass('inactive-view');
+    $('.active-view').removeClass('active-view');
+    $('.homepage').removeClass('inactive-view');
+    $('.homepage').addClass('active-view');
   });
 
   $('.auth-menu-btn').on('click', function() {
