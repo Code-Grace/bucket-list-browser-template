@@ -17,7 +17,7 @@ $(() => {
 
     $('#body').show();
     $('#msg').hide();
-
+		$('.changePw').hide();
 
 
 });
