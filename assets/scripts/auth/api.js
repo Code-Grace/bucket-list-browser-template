@@ -30,8 +30,22 @@ const signOut = () => {
   });
 };
 
+const changePw = (data) => {
+  let id = app.user._id;
+
+  return $.ajax({
+    url: app.host + '/change-password/' + id,
+    method: "PATCH",
+    headers: {
+      Authorization: 'Token token=' + app.user.token,
+    },
+    data: data,
+  });
+};
+
 module.exports = {
   signUp,
   signIn,
   signOut,
+  changePw,
 };
