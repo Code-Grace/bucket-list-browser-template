@@ -46,6 +46,7 @@ webpackJsonp([0],[
 
 	  $('#body').show();
 	  $('#msg').hide();
+	  $('.changePw').hide();
 	});
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -81,9 +82,16 @@ webpackJsonp([0],[
 	  api.signOut().done(ui.signOutSuccess).fail(ui.failure);
 	};
 
+	var onChangePw = function onChangePw(event) {
+	  event.preventDefault();
+	  var data = getFormFields(event.target);
+	  api.changePw(data).done(ui.success).fail(ui.failure);
+	};
+
 	var addHandlers = function addHandlers() {
 	  $('.sign-up-form').on('submit', onSignUp);
 	  $('.sign-in-form').on('submit', onSignIn);
+	  $('.user-forms-pw').on('submit', onChangePw);
 	  $('.sign-out-btn').on('click', onSignOut);
 	};
 
@@ -193,10 +201,24 @@ webpackJsonp([0],[
 	  });
 	};
 
+	var changePw = function changePw(data) {
+	  var id = app.user._id;
+
+	  return $.ajax({
+	    url: app.host + '/change-password/' + id,
+	    method: "PATCH",
+	    headers: {
+	      Authorization: 'Token token=' + app.user.token
+	    },
+	    data: data
+	  });
+	};
+
 	module.exports = {
 	  signUp: signUp,
 	  signIn: signIn,
-	  signOut: signOut
+	  signOut: signOut,
+	  changePw: changePw
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -233,6 +255,7 @@ webpackJsonp([0],[
 	var signInSuccess = function signInSuccess(data) {
 	  app.user = data.user;
 	  $('.sign-out-btn').show();
+	  $('.changePw').show();
 	};
 
 	var signOutSuccess = function signOutSuccess() {
@@ -241,6 +264,7 @@ webpackJsonp([0],[
 	  $('.active-view').removeClass('active-view');
 	  $('.homepage').removeClass('inactive-view');
 	  $('.homepage').addClass('active-view');
+	  $('.changePw').hide();
 	};
 
 	module.exports = {
