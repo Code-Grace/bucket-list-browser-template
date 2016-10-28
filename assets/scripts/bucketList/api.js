@@ -52,7 +52,7 @@ const deleteTask = function (id) {
 };
 
 const showTask = function (data) {
-  let id = data._id;
+  let id = data.tasks._id;
   return $.ajax({
   url: app.host + '/tasks/' + id,
   method: 'GET',
