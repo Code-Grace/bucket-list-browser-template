@@ -14,6 +14,7 @@ const onGetTasks = () => {
 const onShowTask = (event) => {
 	event.preventDefault();
 	let data = getFormFields(event.target);
+	console.log(data);
 	api.showTask(data)
 	.done(ui.showTaskSuccess)
 	.fail(ui.failure);
