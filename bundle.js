@@ -290,6 +290,12 @@ webpackJsonp([0],[
 		api.getList().done(ui.getTaskSuccess).fail(ui.failure);
 	};
 
+	var onShowTask = function onShowTask(event) {
+		event.preventDefault();
+		var data = getFormFields(event.target);
+		api.showTask(data).done(ui.showTaskSuccess).fail(ui.failure);
+	};
+
 	var onCreateTask = function onCreateTask(event) {
 		event.preventDefault();
 		var data = getFormFields(event.target);
@@ -312,6 +318,7 @@ webpackJsonp([0],[
 	var addHandlers = function addHandlers() {
 		$('.get-tasks-btn').on('click', onGetTasks);
 		$('.create-task-form').on('submit', onCreateTask);
+		$('.show-task').on('submit', onShowTask);
 		$('body').on('click', '#delete', onDeleteTask);
 		$('body').on('click', '#update', onUpdateTask);
 	};
@@ -379,11 +386,22 @@ webpackJsonp([0],[
 	  });
 	};
 
+	var showTask = function showTask() {
+	  return $.ajax({
+	    url: app.host + '/tasks',
+	    method: 'GET',
+	    headers: {
+	      Authorization: 'Token token=' + app.user.token
+	    }
+	  });
+	};
+
 	module.exports = {
 	  getList: getList,
 	  createTask: createTask,
 	  updateTask: updateTask,
-	  deleteTask: deleteTask
+	  deleteTask: deleteTask,
+	  showTask: showTask
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
@@ -411,7 +429,7 @@ webpackJsonp([0],[
 
 		tasks.forEach(function (task) {
 			if (task.completed) {
-				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' | ' + 'completed' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button>' + '</li>');
+				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' | ' + 'completed' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> | ' + task._id + '</li>');
 			} else {
 				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' ' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> <button style="color: black;" id="update" -data-id=' + task._id + '>update</button>' + '</li>');
 			}
@@ -420,10 +438,17 @@ webpackJsonp([0],[
 		// $('.task-list').html(showTasksTemplate(data));
 	};
 
+	var showTaskSuccess = function showTaskSuccess(data) {
+		var task = data.tasks;
+		$('.show').html('');
+		$('.show').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' | ' + 'completed' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> | ' + task._id + '</li>');
+	};
+
 	module.exports = {
 		success: success,
 		failure: failure,
-		getTaskSuccess: getTaskSuccess
+		getTaskSuccess: getTaskSuccess,
+		showTaskSuccess: showTaskSuccess
 	};
 	/* WEBPACK VAR INJECTION */}.call(exports, __webpack_require__(2)))
 
