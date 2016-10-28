@@ -293,6 +293,7 @@ webpackJsonp([0],[
 	var onShowTask = function onShowTask(event) {
 		event.preventDefault();
 		var data = getFormFields(event.target);
+		console.log(data);
 		api.showTask(data).done(ui.showTaskSuccess).fail(ui.failure);
 	};
 
@@ -387,7 +388,7 @@ webpackJsonp([0],[
 	};
 
 	var showTask = function showTask(data) {
-	  var id = data._id;
+	  var id = data.tasks._id;
 	  return $.ajax({
 	    url: app.host + '/tasks/' + id,
 	    method: 'GET',
@@ -432,7 +433,7 @@ webpackJsonp([0],[
 			if (task.completed) {
 				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' | ' + 'completed' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> | ' + task._id + '</li>');
 			} else {
-				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' ' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> <button style="color: black;" id="update" -data-id=' + task._id + '>update</button>' + '</li>');
+				$('.task-list').append('<li style="color: white;">' + task.title + ' | ' + task.description + ' ' + '<button style="color: black;" id="delete" -data-id=' + task._id + '> delete</button> <button style="color: black;" id="update" -data-id=' + task._id + '>  update</button> | ' + task._id + '</li>');
 			}
 		});
 
