@@ -51,9 +51,20 @@ const deleteTask = function (id) {
   });
 };
 
+const showTask = function () {
+  return $.ajax({
+  url: app.host + '/tasks',
+  method: 'GET',
+  headers: {
+    Authorization: 'Token token=' + app.user.token,
+    },
+  });
+};
+
 module.exports = {
 	getList,
 	createTask,
   updateTask,
   deleteTask,
+  showTask,
 };
