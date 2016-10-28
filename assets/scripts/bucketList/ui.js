@@ -26,7 +26,7 @@ const getTaskSuccess = (data) => {
 const showTaskSuccess = (data) => {
 	let task = data.tasks;
 	$('.show').html('');
-	$('.show').append( '<li style="color: white;">' + task.title + ' | ' + task.description + ' | ' + task._id + '</li>' );
+	$('.show').append( '<li style="color: white;"> yoooo' + task.title + ' | ' + task.description + ' | ' + task._id + '</li>' );
 };
 
 module.exports = {
