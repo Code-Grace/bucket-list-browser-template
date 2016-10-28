@@ -386,9 +386,10 @@ webpackJsonp([0],[
 	  });
 	};
 
-	var showTask = function showTask() {
+	var showTask = function showTask(data) {
+	  var id = data._id;
 	  return $.ajax({
-	    url: app.host + '/tasks',
+	    url: app.host + '/tasks/' + id,
 	    method: 'GET',
 	    headers: {
 	      Authorization: 'Token token=' + app.user.token
