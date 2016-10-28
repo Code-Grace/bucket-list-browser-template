@@ -31,9 +31,18 @@ const onSignOut = function (event) {
     .fail(ui.failure);
 };
 
+const onChangePw = function (event) {
+  event.preventDefault();
+  let data = getFormFields(event.target);
+  api.changePw(data)
+    .done(ui.success)
+    .fail(ui.failure);
+};
+
 const addHandlers = () => {
   $('.sign-up-form').on('submit', onSignUp);
   $('.sign-in-form').on('submit', onSignIn);
+  $('.user-forms-pw').on('submit', onChangePw);
   $('.sign-out-btn').on('click', onSignOut); 
 };
 

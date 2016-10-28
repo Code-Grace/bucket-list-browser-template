@@ -9,6 +9,7 @@ const failure = () => console.log("failure");
 const signInSuccess = (data) => {
 	app.user = data.user;
 	$('.sign-out-btn').show();
+  $('.changePw').show();
 };
 
 const signOutSuccess = () => {
@@ -17,6 +18,7 @@ const signOutSuccess = () => {
   $('.active-view').removeClass('active-view');
   $('.homepage').removeClass('inactive-view');
   $('.homepage').addClass('active-view');
+  $('.changePw').hide();
 };
 
 module.exports = {

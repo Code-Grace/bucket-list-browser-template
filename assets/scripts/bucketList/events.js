@@ -11,6 +11,15 @@ const onGetTasks = () => {
 	.fail(ui.failure);
 };
 
+const onShowTask = (event) => {
+	event.preventDefault();
+	let data = getFormFields(event.target);
+	console.log(data);
+	api.showTask(data)
+	.done(ui.showTaskSuccess)
+	.fail(ui.failure);
+};
+
 const onCreateTask = (event) => {
 	event.preventDefault();
 	let data = getFormFields(event.target);
@@ -40,6 +49,7 @@ const onUpdateTask = function () {
 const addHandlers = () => {
   $('.get-tasks-btn').on('click', onGetTasks);
   $('.create-task-form').on('submit', onCreateTask);
+  $('.show-task').on('submit', onShowTask);
   $('body').on('click', '#delete', onDeleteTask);
   $('body').on('click', '#update', onUpdateTask);
 };
